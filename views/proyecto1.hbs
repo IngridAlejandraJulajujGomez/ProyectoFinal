@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="./assets/carpeta.css/enormalize.css">
+    <link rel="stylesheet" href="./assets/carpeta.css/Inicio.css">
+
+    <link rel="stylesheet" href="./assets/carpeta.js/java.js">
+</head>
+
+<body>
+    <!--Encabezado-->
+    {{>navbar}}
+
+    <!--PORTAFOLIO-->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>Portafolio</h2>
+
+            <div class="proyecto">
+
+                <div class="overlay">
+                    <h3>Juego Bancoply</h3>
+                    <p>Programacion II</p>
+                    <iframe src="https://drive.google.com/file/d/1hGX6auiM1VsNDIQhdsRR4Uk1ZVN-Du2F/preview" width="640"
+                        height="360" allow="autoplay"></iframe>
+
+                    <button id="volver">Regresar</button>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <!--footer-->
+    {{> footer}}
+
+
+    <!--scripts vuelta-->
+
+    <script>
+        document.getElementById('volver').addEventListener('click', function () {
+            window.history.back();
+        });
+    </script>
+
+
+</body>
+
+</html>

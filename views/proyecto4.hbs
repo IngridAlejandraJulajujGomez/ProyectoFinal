@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="./assets/carpeta.css/enormalize.css">
+    <link rel="stylesheet" href="./assets/carpeta.css/Inicio.css">
+
+    <link rel="stylesheet" href="./assets/carpeta.js/java.js">
+</head>
+
+<body>
+    <!--Encabezado-->
+  {{>navbar}}
+
+    <!--PORTAFOLIO-->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>Portafolio</h2>
+
+               
+                <div class="proyecto">
+                        <div class="overlay">
+                            <h3>Llamado a procesos</h3>
+                            <p>Sistemas Operativos</p>
+                            <iframe src="https://umgt-my.sharepoint.com/personal/ijulajujg_miumg_edu_gt/_layouts/15/embed.aspx?UniqueId=0fe9323e-a9d9-4632-a67a-7eebf8dd1f00&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" 
+                            width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="Proyecto Final.mp4"></iframe>
+                       <button id="volver">Regresar</button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <!--footer-->
+{{> footer}}
+
+<!--scripts vuelta-->
+
+<script>
+document.getElementById('volver').addEventListener('click', function() {
+    window.history.back();
+});
+</script>
+
+</body>
+
+</html>

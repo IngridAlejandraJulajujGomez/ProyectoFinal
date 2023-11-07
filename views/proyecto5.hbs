@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="./assets/carpeta.css/enormalize.css">
+    <link rel="stylesheet" href="./assets/carpeta.css/Inicio.css">
+    
+</head>
+
+<body>
+    <!--Encabezado-->
+    {{>navbar}}
+
+    <!--PORTAFOLIO-->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>Portafolio</h2>
+
+            <div class="proyecto">
+
+                <div class="overlay">
+                    <h3>Segundo Proyecto parcial</h3>
+                    <p>Portafolio Profesional</p>
+                    <iframe
+                        src="https://umgt.sharepoint.com/sites/SL-DesarrolloWeb/_layouts/15/embed.aspx?UniqueId=a8c6c921-349b-461f-b029-7be3b7aa196d&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create"
+                        width="640" height="360" frameborder="0" scrolling="no" allowfullscreen
+                        title="Ingrid Alejandra Julajuj Gomez [2290-20-10758]-20230818_211306-Grabación de la reunión.mp4"></iframe>
+                    <button id="volver">Regresar</button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <!--footer-->
+    {{> footer}}
+
+    <!--scripts vuelta-->
+
+    <script>
+        document.getElementById('volver').addEventListener('click', function () {
+            window.history.back();
+        });
+    </script>
+
+</body>
+
+</html>

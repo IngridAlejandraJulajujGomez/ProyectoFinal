@@ -17,12 +17,38 @@ app.use(express.static('home3'))
 
 //controlador de la ruta principal
 //aquihacemos elllamado de hombe.hbs,noes necesario indicar el tipode archivo
+
+app.use(express.static('public'));
+
 app.get('/',(req,res)=>{
-    res.render('home3',{
-        nombre: 'Ingrid Gomez',
-        titulo: 'Parcial Final'
-    })
-})
+    res.render('home3');
+});
+
+app.get('/proyecto1', (req, res) => {
+    res.render('proyecto1');
+  });
+  
+  app.get('/proyecto2', (req, res) => {
+    res.render('proyecto2');
+  });
+
+  app.get('/proyecto3', (req, res) => {
+    res.render('proyecto3');
+  });
+
+  app.get('/proyecto4', (req, res) => {
+    res.render('proyecto4');
+  });
+
+  app.get('/proyecto5', (req, res) => {
+    res.render('proyecto5');
+  });
+
+
+  /**vuelta */
+  app.get('/home3', (req, res) => {
+    res.render('home3');
+});
 
 
 app.listen(port,()=>{
