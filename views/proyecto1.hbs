@@ -2,22 +2,196 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Portafolio</title>
-    <link rel="stylesheet" href="./assets/carpeta.css/enormalize.css">
-    <link rel="stylesheet" href="./assets/carpeta.css/Inicio.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;200;300;400;600;800&display=swap');
+        @import url();
 
-    <link rel="stylesheet" href="./assets/carpeta.js/java.js">
+        * {
+            box-sizing: border-box;
+            font-family: 'Work Sans';
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            /*permite deslizar cuando se haga clic en la lsita de menu*/
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #252A2E;
+            /* Cambia el color al que desees */
+        }
+
+        /*Menu*/
+        nav {
+            background: #1e2326;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 99;
+        }
+
+        nav a {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+
+        nav a {
+            font-family: 'Righteous';
+            font-size: 36px;
+            color: #1CB698;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li a {
+            text-align: none;
+            color: #fff;
+            margin: 0 15px;
+            padding: 3px;
+            transition: .5s;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #1CB698;
+        }
+
+        .nav-responsive {
+            background-color: #1CB698;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+        }
+
+        /*Seccion Portafolio*/
+        .portfolio {
+            background-color: #252A2E;
+            color: #fff;
+            padding: 50px 20px;
+        }
+
+        .portfolio .contenido-seccion {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .portfolio h2 {
+            font-size: 48px;
+            font-family: 'Righteous';
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .portfolio .galeria {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .portfolio .galeria .proyecto {
+            position: relative;
+            max-width: 340px;
+            height: fit-content;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .portfolio .galeria .proyecto img {
+            width: 100%;
+            display: block;
+        }
+
+        .portfolio .galeria .proyecto .overlay {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            background: linear-gradient(rgba(20, 182, 152, .8), rgba(20, 182, 152, .8));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: 1s;
+            font-size: 18px;
+            letter-spacing: 3px;
+            opacity: 0;
+        }
+
+        .portfolio .galeria .proyecto .overlay h3 {
+            margin-bottom: 20px;
+            transition: 1s;
+        }
+
+        .portfolio .galeria .proyecto .overlay:hover {
+            opacity: 1;
+        }
+
+        .portfolio .galeria .proyecto .overlay:hover h3 {
+            margin-bottom: 0px;
+        }
+
+        /*Seccion Contacto*/
+
+        footer {
+            background-color: #1e2326;
+            color: #fff;
+            padding: 50px 0;
+        }
+
+        footer .contenido-seccion {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        footer h2 {
+            font-size: 48px;
+            font-family: 'Righteous';
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer .fila {
+            display: flex;
+        }
+
+        footer .col {
+            width: 50%;
+            padding: 10px;
+            position: relative;
+        }
+
+        footer .col input,
+        .footer .col textarea {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            border: none;
+            margin-bottom: 20px;
+            background-color: #252A2E;
+            color: #fff;
+            font-size: 18px;
+        }
+    </style>
 </head>
 
 <body>
+
     <!--Encabezado-->
     {{>navbar}}
-
+    <link rel="stylesheet" href="../public/assets/css/Inicio.css">
     <!--PORTAFOLIO-->
     <section id="portfolio" class="portfolio">
         <div class="contenido-seccion">
@@ -26,20 +200,19 @@
             <div class="proyecto">
 
                 <div class="overlay">
-                    <h3>Juego Bancoply</h3>
-                    <p>Programacion II</p>
+                    <h3>MRU Y MRUV</h3>
+                    <p>Desarrollo Web</p>
+                       <br>
+                    <p>Para este proyecto se realizó una calculadora con formulas de física, especificamente sobre el
+                        movimiento rectilineo uniforme y uniformemente variado</p>
+                    <p>La pagina fue creada con el proposito de poder ayudar a resolver calculos de las mismas</p>
                     <iframe src="https://drive.google.com/file/d/1hGX6auiM1VsNDIQhdsRR4Uk1ZVN-Du2F/preview" width="640"
                         height="360" allow="autoplay"></iframe>
-
-                    <button id="volver">Regresar</button>
-
                 </div>
+                <button id="volver">Regresar</button>
             </div>
         </div>
-        </div>
     </section>
-
-
 
     <!--footer-->
     {{> footer}}
@@ -52,7 +225,6 @@
             window.history.back();
         });
     </script>
-
 
 </body>
 
